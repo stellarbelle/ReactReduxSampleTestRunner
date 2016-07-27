@@ -1,24 +1,36 @@
 #container {
-	font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #app {
-	text-align: center;
-	margin-top: 100px;
-	h1 {
-		color: cadetblue;
-	}
-	p {
-		font-size: 16px
-	}
-	h3 {
-		color: crimson;
-	}
-	button {
-		background-color: lightsteelblue;
-		border-radius: 10px;
-		width: 130px;
-		height: 30px;
-		font-size: 14px;
-	}
+  text-align: center;
+  margin-top: 100px;
+  h1 {
+    color: cadetblue;
+  }
+  p {
+    font-size: 16px
+  }
+  h3 {
+    color: crimson;
+  }
+  button {
+    background-color: lightsteelblue;
+    border-radius: 10px;
+    width: 130px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .failed {
+    color: #ff0909;
+  }
+  .passed {
+    color: #39c8e0;
+  }
+  .waiting {
+    color: #149f1e;
+  }
+  .running {
+    color: #ffd722;
+  }
 }

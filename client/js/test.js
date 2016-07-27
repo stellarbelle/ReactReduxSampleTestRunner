@@ -17,3 +17,5 @@ var tests = [
   { description: "semicolons are adequately waterproof", run: generateDummyTest() },
   { description: "capital letters can do yoga",          run: generateDummyTest() }
 ];
+
+export default tests;
