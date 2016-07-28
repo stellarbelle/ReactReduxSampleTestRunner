@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './client/js/app.js',
+    entry: './client/js/reduxApp.js',
     output: {path: __dirname, filename: 'bundle.js'},
     module: {
         loaders: [
