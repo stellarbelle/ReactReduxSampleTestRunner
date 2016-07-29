@@ -1,12 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import tests from './test.js';
-import testApp from './reducers/index';
+import { store } from './components/App';
 import App from './components/App'
+import { ranTest } from './actions/index';
 require('../css/styles.scss');
-
-const store = createStore(testApp);
 
 for (var x = 0; x < tests.length; x++) {
     var newTest = tests[x];
@@ -20,13 +19,14 @@ const startTests = (testItems) => {
     }
 };
 
-
 const renderPage = () => {
     render(
-        <App
-            value={store.getState()}
-            startTests={() => startTests(store.getState().tests)}
-        />,
+        <Provider store={store}>
+            <App
+                value={store.getState()}
+                startTests={() => startTests(store.getState().tests)}
+            />
+        </Provider>,
         document.getElementById('app')
     );
 };

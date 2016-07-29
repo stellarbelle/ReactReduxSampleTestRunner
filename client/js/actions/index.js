@@ -1,12 +1,13 @@
+import { store } from '../components/App';
 
-const ranTest = (id) => {
+export const ranTest = (id) => {
     return {
         type: 'RUN_TEST',
         id,
     };
 };
 
-const failedTest = (id) => {
+export const failedTest = (id) => {
     store.dispatch({type: "FAILED"});
     return {
         type: 'FAILED_TEST',
@@ -14,10 +15,11 @@ const failedTest = (id) => {
     };
 };
 
-const passedTest = (id) => {
+export const passedTest = (id) => {
     store.dispatch({type: "PASSED"});
     return {
         type: 'PASSED_TEST',
         id,
     };
 };
+

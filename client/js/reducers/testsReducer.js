@@ -1,3 +1,5 @@
+import { passedTest, failedTest } from '../actions/index';
+import { store } from '../components/App';
 
 const test = (state, action) => {
     //state is a test
